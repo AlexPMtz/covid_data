@@ -1,0 +1,15 @@
+.subContainer{
+  border-radius: 5px;
+  /* background-color: lightgrey; */
+  background-color: white;
+}
+
+.box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.smallWidth{
+  max-width: 40px;
+}
