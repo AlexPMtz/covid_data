@@ -25,12 +25,12 @@ const Home = () => {
       <div className={Styles.subContainer + ' container-lg'}>
         <div className={Styles.box}>
           <h1>Covid Data</h1>
-          <button className='btn btn-primary'>USA information</button>
+          <button className='btn btn-primary' onClick={() => navigate('USA_Info')}>USA information</button>
         </div>
         <br />
         <br />
 
-        <table className='table'>
+        <table className='table table-striped'>
           <thead>
             <tr>
               <th scope="col">#</th>
@@ -40,7 +40,7 @@ const Home = () => {
           </thead>
           <tbody>
             {
-              estados.map(({ name, state, twitter, covid19Site }, count = 0) => (
+              estados.map(({ name, state, twitter }, count = 0) => (
                 <tr key={`_id:${state}`} onClick={() => navigate(`stateInfo/${state.toLowerCase()}`)} style={{ cursor: 'pointer' }}>
                   <th scope="row">{count + 1}</th>
                   <td>{name}</td>

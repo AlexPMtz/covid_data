@@ -3,7 +3,8 @@ import axios from 'axios';
 export {
   getStates,
   getState,
-  getStateInfo
+  getStateInfo,
+  getUSAInfo
 }
 
 const getStates = async () => {
@@ -27,5 +28,13 @@ const getStateInfo = async (state) => {
     return await axios.get(`https://api.covidtracking.com/v1/states/${state}/info.json`)
   } catch (error) {
     console.warn(error)
+  }
+}
+
+const getUSAInfo = async () => {
+  try {
+    return await axios.get('https://api.covidtracking.com/v1/us/current.json')
+  } catch (error) {
+    console.warn(error)   
   }
 }

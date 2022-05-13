@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom';
 
-import Styles from '../Home/Home.module.css'
 import { getState, getStateInfo } from '../../services/endpoints';
 import WithCommonMenu from '../../HOC/WithCommonMenu';
+
+import Styles from '../Home/Home.module.css'
 
 const StateInfo = () => {
 
@@ -38,7 +39,7 @@ const StateInfo = () => {
         <br />
         <br />
 
-        <table className='table'>
+        <table className='table table-striped'>
           <thead>
             <tr>
               <th scope="col">Fecha</th>
